@@ -20,25 +20,39 @@ int main()
 		int num_grade;
 		cout << "Please enter a test score from 1-100. \n";
 		cin >> num_grade;
-		char grade;
+		string grade;
 		if (option == 1)
 		{
-			grade = get_letter_grade_using_if(num_grade);
-			cout << "Here is your numerical grade \n";
-			cout << grade;
-			cout << "\n";
+			if (num_grade <=100 && num_grade >= 0)
+			{
+				grade = get_letter_grade_using_if(num_grade);
+				cout << "Here is your numerical grade \n";
+				cout << grade;
+				cout << "\n";
+			}
+			else
+			{
+				cout << "You did not enter a score 1-100. \n";
+			}
 		}
 		else if (option == 2)
 		{
-
-			grade = get_letter_grade_using_switch(num_grade);
-			cout << "Here is your numerical grade \n";
-			cout << grade;
-			cout << "\n";
+			if (num_grade <=100 && num_grade >= 0)
+			{
+				grade = get_letter_grade_using_switch(num_grade);
+				cout << "Here is your numerical grade \n";
+				cout << grade;
+				cout << "\n";
+			}
+			else
+			{
+				cout << "You did not enter a score 1-100. \n";
+			}
 		}
 	}
 	else if (option == 3)
 	{
-		return 0;
+		cout << "Existing the program";
 	}
+	return 0;
 }
