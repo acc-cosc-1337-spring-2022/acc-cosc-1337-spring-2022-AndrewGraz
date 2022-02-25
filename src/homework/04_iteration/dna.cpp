@@ -1,30 +1,62 @@
 #include "dna.h"
-/*
-Write code for function get_gc_content that accepts
-a const reference string parameter and returns a double.
-Calculate GC content:
-Iterate string count Gs and Cs, divide count by string length.
-Return quotient.
-*/
+#include<iostream>
+using std::cout; using std::cin;
 
+int factorial(int num)
+{
+    int sum = 1;
+    while(num >0)
+    {
+        sum = num * sum;
+        num -=1;
+    }
+    return sum;
+}
 
+int gcd(int num1, int num2)
+{
+    while(num1 != num2)
+    {
+        if (num1 > num2)
+        {
+            num1 -= num2;         
+        }
+        else if (num1 < num2)
+        {
+           num2 -= num1;
+        }
+    }
+    return num1; 
+}
 
+void display_menu()
+{
+    cout << "main \n";
+	cout << "";
+	cout << "1-Factorial \n";
+	cout << "2-Greatest Common Divisor \n";
+	cout << "3-Exit \n";
+}
 
-/*
-Write code for function get_reverse_string that
-accepts a string parameter and returns a string reversed.
-*/
-
-
-
-/*
-Write prototype for function get_dna_complement that
-accepts a string dna and returns a string.
-Calculate dna complement:
-a. call function get_reverse_string(dna), save results to a local string variable
-b. iterate local string variable and
-    replace A with T, T with A, C with G and G with C
-c. return string
-
-*/
+int menu_runner()
+{
+    cout << "Please enter the option \n";
+	int option;
+	char repeat;
+	repeat = 'y';
+	while (repeat == 'y')
+	{
+    	cin >> option;
+		if (option != 1 && option != 2 && option != 3)
+		{
+			cout << "Please enter a option. \n";
+			repeat = 'y';
+		}
+		else
+		{
+			repeat = 'n';
+		}
+	}
+    return option;
+}
 
