@@ -13,15 +13,14 @@ user enters a y or Y.
 */
 int main() 
 {
-	char yesser = 'y';
+	char yesser = 'n';
 	int option;
-
-	display_menu();
-	option = menu_runner();
 
 
     do
     {
+		display_menu();
+		option = menu_runner();
 		switch (option)
    		{
         	case 1:
@@ -30,7 +29,7 @@ int main()
 				cout << "Please enter a number. \n";
 				cin >> num;
             	sum = factorial(num);
-				cout<< sum;
+				cout<< sum << "\n";
 				yesser = 'y';
             	break;
 			
@@ -44,7 +43,7 @@ int main()
 				cout << "Please enter the second number number. \n";
 				cin >> num2;
             	out = gcd(num1, num2);
-				cout << out;
+				cout << out << "\n";
 				yesser = 'y';
             	break;
 			
@@ -55,15 +54,15 @@ int main()
             	if (yesser == 'y')
             	{
                 	cout << "The program is now exisiting. \n";
+					yesser = 'n';
             	}
             	else
             	{
                 	cout << "Please enter a option. \n";   
-					cin >> option;            
+					cin >> option;    
+					yesser = 'y';        
             	}
-		
-		
 		}   
-    } while (yesser != 'y');
+    } while (yesser != 'n');
 	return 0;   
 }
