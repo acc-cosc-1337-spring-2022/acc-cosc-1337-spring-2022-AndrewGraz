@@ -3,22 +3,21 @@
 #include<iostream>
 #include "sequence.h"
 
-//write using statements for cin cout
-
-
-/*
-Write code to create a vector of string names, add the values "John", "Mary", "Patty",
-"Sam" to the vector, call the function display_vector and pass the names vector as
-an argument, prompt user for a name to search for and a value to replace searched value with.
-Afterward, call the update_vector_element with the names vector and call the display_vector
-function.
-Don't worry about displaying a message for values that aren't found.  Assume user will
-give you a valid name.
-*/
+//using statements for cin cout
+using std::cout; using std::cin;
 
 int main()
 {
+	int option;
+	char yesser = 'n';
 
+	do 
+	{
+		display_menu();
+		option = menu_runner();
+		yesser = runner_of_main(option, yesser);
+
+	} while (yesser != 'n');
 	return 0;
 }
-
+ 
