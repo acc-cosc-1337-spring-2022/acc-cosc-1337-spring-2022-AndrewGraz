@@ -1,7 +1,7 @@
 //cpp 
 #include "tic_tac_toe.h"
 
-using std::string; using std::cout;
+using std::string; using std::cout; using std::cin;
 
 bool TicTacToe::game_over()
 {
@@ -35,12 +35,24 @@ void TicTacToe::mark_board(int position)
     set_next_player();
 }
 
-void TicTacToe::display_board()const
+//displays the board
+std::ostream& operator<<(std::ostream& out, const TicTacToe& game)
 {
     for(int i=0 ; i < 9 ; i+=3)
     {
-        cout << pegs[i] << "|" << pegs[i+1] << "|" << pegs[i+2] << "\n";
+        out << game.pegs[i] << "|" << game.pegs[i+1] << "|" << game.pegs[i+2] << "\n";
     }
+    return out; 
+}
+
+//gets position
+std::istream& operator>>(std::istream& in, TicTacToe& game)
+{
+    int position;
+    cout << "Enter position [1-9]"; 
+    in >> position;
+    game.mark_board(position);
+    return in;
 }
 
 void TicTacToe::set_next_player()
@@ -152,3 +164,4 @@ void TicTacToe::set_winner()
         winner = "X";
     }
 }
+
