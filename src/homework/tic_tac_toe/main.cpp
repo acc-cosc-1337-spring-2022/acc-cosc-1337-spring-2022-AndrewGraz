@@ -20,7 +20,7 @@ int main()
         int three_or_four = 0;
         while (three_or_four != 3 && three_or_four != 4)
         {
-            cout << "DO you want to play TicTacToe 3x3 or 4x4: \n enter 3 or 4 \n";
+            cout << "DO you want to play TicTacToe 3x3 or 4x4: \nenter 3 or 4 \n";
             cin >> three_or_four;
             if (three_or_four != 3 && three_or_four != 4)
             {
@@ -34,7 +34,7 @@ int main()
         }
         else if(three_or_four == 4)
         {
-            game = make_unique<TicTacToe3>();
+            game = make_unique<TicTacToe4>();
         }
 
         do

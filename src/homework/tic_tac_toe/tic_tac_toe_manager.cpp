@@ -28,7 +28,7 @@ std::ostream& operator<<(std::ostream& out, const TicTacToeManager& manager)
     }
     return out;
 }
-
+ 
 
 void TicTacToeManager::update_winner_count(std::string winner)
 {
@@ -44,4 +44,4 @@ void TicTacToeManager::update_winner_count(std::string winner)
     {
         ties += 1; 
     }
-}
+} 

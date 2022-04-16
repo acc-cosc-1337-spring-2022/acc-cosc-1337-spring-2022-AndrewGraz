@@ -12,7 +12,7 @@ using std::make_unique;
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
 
-class TicTacToeManager
+class TicTacToeManager : public TicTacToe 
 {
 
 public: 

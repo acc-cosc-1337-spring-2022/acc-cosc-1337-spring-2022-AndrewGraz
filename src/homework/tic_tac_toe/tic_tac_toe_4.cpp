@@ -10,7 +10,7 @@ Win by column if and return true if (each column index)
 else
 false
 */
-bool TicTacToe::check_column_win()
+bool TicTacToe4::check_column_win()
 {
     bool column_win = false;
     if ((pegs[0] == "X" && pegs[4] == "X" && pegs[8] == "X" && pegs[12] == "X") || 
@@ -42,7 +42,7 @@ Win by row if
 8, 9, 10, 11 are equal 
 12,13,14, 15 are equal
 */
-bool TicTacToe::check_row_win()
+bool TicTacToe4::check_row_win()
 {
     bool row_win = false;
     if ((pegs[0] == "X" && pegs[1] == "X" && pegs[2] == "X" && pegs[3] == "X") || 
@@ -75,7 +75,7 @@ Win diagonally
 12,13,14, 15
 
 */
-bool TicTacToe::check_diagonal_win()
+bool TicTacToe4::check_diagonal_win()
 {
     bool diagonal_win = false;
     if ((pegs[0] == "X" && pegs[5] == "X" && pegs[10] == "X" && pegs[15] == "X") || 
