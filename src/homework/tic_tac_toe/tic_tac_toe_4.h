@@ -15,3 +15,4 @@ private:
     bool check_diagonal_win() override;
 
 };
+
